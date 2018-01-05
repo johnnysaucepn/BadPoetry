@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BadPoetry": {
+      "commandName": "Project",
+      "commandLineArgs": "-f:\"poetry1.json\""
+    }
+  }
+}

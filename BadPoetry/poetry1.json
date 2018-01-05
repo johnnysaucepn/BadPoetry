@@ -1,0 +1,7 @@
+﻿{
+  "Templates": [ "The {adjective1} {noun1} {adverb1} {verb1} over the {adjective2} {noun2}" ],
+  "Nouns": [ "dog", "cat", "neighbour" ],
+  "Verbs": [ "dog", "cat", "neighbour" ],
+  "Adjectives": [ "dog", "cat", "neighbour" ],
+  "Adverbs": [ "dog", "cat", "neighbour" ]
+}
