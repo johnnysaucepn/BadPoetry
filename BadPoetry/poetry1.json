@@ -1,7 +1,15 @@
 ﻿{
-  "Templates": [ "The {adjective1} {noun1} {adverb1} {verb1} over the {adjective2} {noun2}" ],
-  "Nouns": [ "dog", "cat", "neighbour" ],
-  "Verbs": [ "dog", "cat", "neighbour" ],
-  "Adjectives": [ "dog", "cat", "neighbour" ],
-  "Adverbs": [ "dog", "cat", "neighbour" ]
+  "Templates": [
+    "{article1.ToCaps} {adjective1} {noun1} {adverb1} {verb1} {article2} {adjective2} {noun2}!",
+    "{article1.ToCaps} {noun1} {adverb1} {verb1} {article2} {adjective1} {noun2}!",
+    "{article1.ToCaps} {noun1} {adverb1} {verb1} {article2} {noun2}!",
+    "{article1.ToCaps} {adjective1} {noun1} and {article2} {adjective2} {noun2} {verb1} each other!",
+    "{article1.ToCaps} {adjective1} {noun1} {adverb1} {verb1} {article2} {adjective2} {noun2}!",
+    "{article1.ToCaps} {adjective1} {noun1} {verb1} {article2} {adjective2} {noun2} {adverb1}!"
+  ],
+  "Nouns": [ "dog", "banana", "neighbour" ],
+  "Verbs": [ "ran", "danced", "jiggled" ],
+  "Adjectives": [ "hairy", "obsequious", "quiet" ],
+  "Adverbs": [ "angrily", "shockingly", "quietly" ],
+  "Articles": [ "one", "one", "one", "the", "the", "the", "a", "a", "a" ] 
 }

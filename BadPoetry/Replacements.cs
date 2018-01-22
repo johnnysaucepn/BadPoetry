@@ -1,45 +1,59 @@
 ﻿using System;
+using System.Linq;
 
 namespace BadPoetry
 {
     internal class Replacements
     {
-        public string Noun1 { get; set; }
-        public string Noun2 { get; set; }
-        public string Noun3 { get; set; }
+        public Word Noun1 { get; set; }
+        public Word Noun2 { get; set; }
+        public Word Noun3 { get; set; }
 
-        public string Verb1 { get; set; }
-        public string Verb2 { get; set; }
-        public string Verb3 { get; set; }
+        public Word Verb1 { get; set; }
+        public Word Verb2 { get; set; }
+        public Word Verb3 { get; set; }
 
-        public string Adjective1 { get; set; }
-        public string Adjective2 { get; set; }
-        public string Adjective3 { get; set; }
+        public Word Adjective1 { get; set; }
+        public Word Adjective2 { get; set; }
+        public Word Adjective3 { get; set; }
 
-        public string Adverb1 { get; set; }
-        public string Adverb2 { get; set; }
-        public string Adverb3 { get; set; }
+        public Word Adverb1 { get; set; }
+        public Word Adverb2 { get; set; }
+        public Word Adverb3 { get; set; }
 
-        
+        public Word Article1 { get; set; }
+        public Word Article2 { get; set; }
+        public Word Article3 { get; set; }
+
         public Replacements(InputSource choices, Random random = null)
         {
             random = random ?? new Random();
 
-            Noun1 = choices.Nouns[random.Next(choices.Nouns.Count)];
-            Noun2 = choices.Nouns[random.Next(choices.Nouns.Count)];
-            Noun3 = choices.Nouns[random.Next(choices.Nouns.Count)];
+            var nouns = choices.Nouns.Select(x => new Word(x)).ToList();
+            var verbs = choices.Verbs.Select(x => new Word(x)).ToList();
+            var adjectives = choices.Adjectives.Select(x => new Word(x)).ToList();
+            var adverbs = choices.Adverbs.Select(x => new Word(x)).ToList();
+            var articles = choices.Articles.Select(x => new Word(x)).ToList();
 
-            Verb1 = choices.Verbs[random.Next(choices.Verbs.Count)];
-            Verb2 = choices.Verbs[random.Next(choices.Verbs.Count)];
-            Verb3 = choices.Verbs[random.Next(choices.Verbs.Count)];
+            Noun1 = nouns[random.Next(nouns.Count)];
+            Noun2 = nouns[random.Next(nouns.Count)];
+            Noun3 = nouns[random.Next(nouns.Count)];
 
-            Adjective1 = choices.Adjectives[random.Next(choices.Adjectives.Count)];
-            Adjective2 = choices.Adjectives[random.Next(choices.Adjectives.Count)];
-            Adjective3 = choices.Adjectives[random.Next(choices.Adjectives.Count)];
+            Verb1 = verbs[random.Next(verbs.Count)];
+            Verb2 = verbs[random.Next(verbs.Count)];
+            Verb3 = verbs[random.Next(verbs.Count)];
 
-            Adverb1 = choices.Adverbs[random.Next(choices.Adverbs.Count)];
-            Adverb2 = choices.Adverbs[random.Next(choices.Adverbs.Count)];
-            Adverb3 = choices.Adverbs[random.Next(choices.Adverbs.Count)];
+            Adjective1 = adjectives[random.Next(adjectives.Count)];
+            Adjective2 = adjectives[random.Next(adjectives.Count)];
+            Adjective3 = adjectives[random.Next(adjectives.Count)];
+
+            Adverb1 = adverbs[random.Next(adverbs.Count)];
+            Adverb2 = adverbs[random.Next(adverbs.Count)];
+            Adverb3 = adverbs[random.Next(adverbs.Count)];
+
+            Article1 = articles[random.Next(articles.Count)];
+            Article2 = articles[random.Next(articles.Count)];
+            Article3 = articles[random.Next(articles.Count)];
         }
     }
 }

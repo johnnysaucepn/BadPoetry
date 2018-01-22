@@ -10,6 +10,7 @@ namespace BadPoetry
         public List<string> Nouns { get; set; } = new List<string>();
         public List<string> Adjectives { get; set; } = new List<string>();
         public List<string> Adverbs { get; set; } = new List<string>();
+        public List<string> Articles { get; set; } = new List<string>();
 
         internal void Concatenate(InputSource inputFile)
         {
@@ -18,11 +19,12 @@ namespace BadPoetry
             Nouns.AddRange(inputFile.Nouns);
             Adjectives.AddRange(inputFile.Adjectives);
             Adverbs.AddRange(inputFile.Adverbs);
+            Articles.AddRange(inputFile.Articles);
         }
 
         public bool IsValid()
         {
-            return Templates.Any() && Verbs.Any() && Nouns.Any() && Adjectives.Any() && Adverbs.Any();
+            return Templates.Any() && Verbs.Any() && Nouns.Any() && Adjectives.Any() && Adverbs.Any() && Articles.Any();
         }
 
     }

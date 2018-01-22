@@ -70,6 +70,7 @@ namespace BadPoetry
                 var replacements = new Replacements(concatenatedFile);
 
                 Smart.Default.Settings.CaseSensitivity = SmartFormat.Core.Settings.CaseSensitivityType.CaseInsensitive;
+                
 
                 Console.WriteLine(Smart.Format(template, replacements));
             }

@@ -8,6 +8,7 @@ namespace BadPoetry
         static void Main(string[] args)
         {
             Parser.Run(args, new ApplicationActions());
+            Console.ReadKey();
         }
     }
 }
