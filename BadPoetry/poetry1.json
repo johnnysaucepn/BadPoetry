@@ -1,15 +1,35 @@
 ﻿{
   "Templates": [
-    "{article1.ToCaps} {adjective1} {noun1} {adverb1} {verb1} {article2} {adjective2} {noun2}!",
-    "{article1.ToCaps} {noun1} {adverb1} {verb1} {article2} {adjective1} {noun2}!",
-    "{article1.ToCaps} {noun1} {adverb1} {verb1} {article2} {noun2}!",
-    "{article1.ToCaps} {adjective1} {noun1} and {article2} {adjective2} {noun2} {verb1} each other!",
-    "{article1.ToCaps} {adjective1} {noun1} {adverb1} {verb1} {article2} {adjective2} {noun2}!",
-    "{article1.ToCaps} {adjective1} {noun1} {verb1} {article2} {adjective2} {noun2} {adverb1}!"
+    "{article1.caps} {adjective1} {noun1} {adverb1} {verb1} {article2} {adjective2} {noun2}!",
+    "{article1.caps} {noun1} {adverb1} {verb1} {article2} {adjective1} {noun2}!",
+    "{article1.caps} {noun1} {adverb1} {verb1} {article2} {noun2}!",
+    "{article1.caps} {adjective1} {noun1} and {article2} {adjective2} {noun2} {verb1} each other!",
+    "{article1.caps} {adjective1} {noun1} {adverb1} {verb1} {article2} {adjective2} {noun2}!",
+    "{article1.caps} {adjective1} {noun1} {verb1} {article2} {adjective2} {noun2} {adverb1}!"
   ],
-  "Nouns": [ "dog", "banana", "neighbour" ],
-  "Verbs": [ "ran", "danced", "jiggled" ],
-  "Adjectives": [ "hairy", "obsequious", "quiet" ],
-  "Adverbs": [ "angrily", "shockingly", "quietly" ],
-  "Articles": [ "one", "one", "one", "the", "the", "the", "a", "a", "a" ] 
+  "Nouns": [
+    "Australian", "leek", "reindeer", "cat", "judge", "man", "duck", "janitor", "vandal", "hippo", "dinner-lady", "dog",
+    "spider", "doorknob", "squirrel", "nappy", "walrus", "policeman", "woman", "snake", "teacher", "sock", "vulture",
+    "politician", "lunatic", "underwear", "quark", "elephant", "gadjee", "cow", "caterpillar", "rhino", "snob",
+    "school pupil", "lawyer", "computer programmer", "eagle", "asteroid", "American", "stripper", "golfer", "satellite",
+    "salamander", "ape", "doorknob"
+  ],
+  "Verbs": [
+    "pestered", "bent", "kicked", "battered", "regurgitated", "blasted", "licked", "mutated", "talked to", "damaged",
+    "drunk", "pleaded with", "dissolved", "fed", "assaulted", "demolished", "electrocuted", "mutilated", "shouted at",
+    "destroyed", "castrated", "force-fed", "hung", "chatted up", "lynched", "eyed up", "pleaded with", "executed",
+    "smashed", "denazified"
+  ],
+  "Adjectives": [
+    "megalomaniacal", "yellow", "wooden", "pug-nosed", "sheepish", "helpful", "suburban", "hungry", "gay", "greasy",
+    "stupid", "happy", "injured", "cremated", "cardboard", "perverted", "painted", "fluffy", "plastic", "gregarious",
+    "smelly", "fat", "friendly", "upside-down", "dead", "ferocious", "pleased", "angry", "inflammable", "genderless",
+    "hairy", "regurgitated", "wrinkled", "resident", "carnivorous", "solar-powered", "sleazy"
+  ],
+  "Adverbs": [
+    "kinkily", "viciously", "in a friendly manner", "nastily", "contentedly", "quietly", "politely", "pleasantly",
+    "drunkenly", "sadistically", "sneakily", "foolishly", "happily", "surprisingly well", "sycophantically",
+    "splendidly", "tiredly", "angrily", "effortlessly", "silently", "revoltingly", "quickly"
+  ],
+  "Articles": ["the", "the", "the", "the", "the", "a", "a", "a", "a", "a", "one", "one", "one", "another"]
 }

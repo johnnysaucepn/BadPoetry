@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace BadPoetry
 {
@@ -18,7 +16,8 @@ namespace BadPoetry
             return _word;
         }
 
-        public string ToCaps()
+        [SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Used by formatting specifier")]
+        public string Caps()
         {
             return string.Concat(_word[0].ToString().ToUpper(), _word.Substring(1));
         }

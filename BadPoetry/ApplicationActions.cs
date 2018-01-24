@@ -2,10 +2,8 @@
 using Newtonsoft.Json;
 using SmartFormat;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using System.Text;
 
 namespace BadPoetry
 {
@@ -32,6 +30,7 @@ namespace BadPoetry
         /// </summary>
         [Verb(IsDefault = true, Description = "Do some bad poetry")]
         [SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Implicitly triggered by CLAP parser")]
+        [SuppressMessage("ReSharper", "ParameterTypeCanBeEnumerable.Global")]
         public void Poem(
             [Required, Aliases("f")] string[] inputFilenames,
             [DefaultValue(5), Aliases("l")] int lines
@@ -39,11 +38,12 @@ namespace BadPoetry
         {
             var concatenatedFile = new InputSource();
 
-            var serializerSettings = new JsonSerializerSettings()
+            var serializerSettings = new JsonSerializerSettings
             {
                 MissingMemberHandling = MissingMemberHandling.Ignore
             };
 
+            // Concatenate all the input word files we're going to use
             foreach (var filename in inputFilenames)
             {
                 var path = Path.GetFullPath(filename);
@@ -61,17 +61,14 @@ namespace BadPoetry
 
             var random = new Random();
 
+            Smart.Default.Settings.CaseSensitivity = SmartFormat.Core.Settings.CaseSensitivityType.CaseInsensitive;
+
             for (var i=0; i<lines; i++)
             {
-                var templateIndex = random.Next(concatenatedFile.Templates.Count);
-
-                var template = concatenatedFile.Templates[templateIndex];
+                var template = concatenatedFile.Templates[random.Next(concatenatedFile.Templates.Count)];
 
                 var replacements = new Replacements(concatenatedFile);
-
-                Smart.Default.Settings.CaseSensitivity = SmartFormat.Core.Settings.CaseSensitivityType.CaseInsensitive;
                 
-
                 Console.WriteLine(Smart.Format(template, replacements));
             }
         }

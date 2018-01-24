@@ -1,14 +1,14 @@
-﻿using CLAP;
-using System;
+﻿using System.Diagnostics.CodeAnalysis;
+using CLAP;
 
 namespace BadPoetry
 {
-    class Program
+    [SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Parser.Run(args, new ApplicationActions());
-            Console.ReadKey();
         }
     }
 }

@@ -1,29 +1,32 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace BadPoetry
 {
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global", Justification = "Used by formatting specifier")]
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global", Justification = "Used by formatting specifier")]
     internal class Replacements
     {
-        public Word Noun1 { get; set; }
-        public Word Noun2 { get; set; }
-        public Word Noun3 { get; set; }
+        public Word Noun1 { get; }
+        public Word Noun2 { get; }
+        public Word Noun3 { get; }
 
-        public Word Verb1 { get; set; }
-        public Word Verb2 { get; set; }
-        public Word Verb3 { get; set; }
+        public Word Verb1 { get; }
+        public Word Verb2 { get; }
+        public Word Verb3 { get; }
 
-        public Word Adjective1 { get; set; }
-        public Word Adjective2 { get; set; }
-        public Word Adjective3 { get; set; }
+        public Word Adjective1 { get; }
+        public Word Adjective2 { get; }
+        public Word Adjective3 { get; }
 
-        public Word Adverb1 { get; set; }
-        public Word Adverb2 { get; set; }
-        public Word Adverb3 { get; set; }
+        public Word Adverb1 { get; }
+        public Word Adverb2 { get; }
+        public Word Adverb3 { get; }
 
-        public Word Article1 { get; set; }
-        public Word Article2 { get; set; }
-        public Word Article3 { get; set; }
+        public Word Article1 { get; }
+        public Word Article2 { get; }
+        public Word Article3 { get; }
 
         public Replacements(InputSource choices, Random random = null)
         {
